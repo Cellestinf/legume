@@ -1,0 +1,14 @@
+
+while True:
+    pass_ = []
+    a = int(input('Какое число указано? (от 3 до 20) Ввод: '))
+    if 2 < a < 21:
+        for j in range (1, a):
+            for k in range (j+1, a):
+                if a % ( j + k) == 0:
+                    pass_.append(j)
+                    pass_.append(k)
+        print(f'Вот нужный пароль: {pass_}')
+    else:
+        print('!Не подходит!')
+        continue
