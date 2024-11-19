@@ -1,3 +1,4 @@
+
 calls = 0
 
 def count_calls():
@@ -5,9 +6,9 @@ def count_calls():
     calls = calls + 1
 
 def string_info(string):
-    a = ( len(string), string.upper(), string.lower() )
-    print(a)
     count_calls()
+    a = ( len(string), string.upper(), string.lower() )
+    return a
 
 def is_contains(string, list_to_search):
     string = string.lower()
@@ -16,14 +17,11 @@ def is_contains(string, list_to_search):
     a = True
     if string not in list_to_search:
         a = False
-    print(a)
+    return a
 
 print(string_info('Capybara'))
-print()
 print(string_info('Armageddon'))
-print()
 print(is_contains('Urban', ['ban', 'BaNaN', 'urBAN']))
-print()
 print(is_contains('cycle', ['recycling', 'cyclic']))
-print()
 print(calls)
+
