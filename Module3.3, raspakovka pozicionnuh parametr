@@ -1,0 +1,31 @@
+
+def print_params(a = 1, b = 'строка', c = True):
+  print(a, b, c)
+
+print_params()
+print_params(2)
+print_params(b = 25)
+print_params(c = [1,2,3])
+print_params(8, b = 'новая строка')
+print_params(c = 'TrueFalse', a = False, b = [1,2,3] )
+print()
+
+values_list = [111, 'сок', True]
+values_dict = {'a': 111111, 'b': 'S+сок', 'c': False}
+
+print_params(*values_list)
+print_params(**values_dict)
+print_params(values_dict)
+print_params(values_list[0], 22, '32')
+print_params(values_list[2])
+print_params(b = values_list[2])
+print_params(values_dict['a'], '00"', 99)
+print()
+
+values_list_2 = ['=_=',99.99]
+print_params(*values_list_2, 42)
+print()
+print_params(values_list_2, 'uff' , 666667)
+print_params(*values_list_2, False)
+print_params(values_list_2[1], *values_list_2)
+print_params(*values_list_2, values_list_2[0])
